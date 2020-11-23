@@ -6,7 +6,7 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 19:34:13 by cerebus           #+#    #+#             */
-/*   Updated: 2020/11/23 17:23:22 by cerebus          ###   ########.fr       */
+/*   Updated: 2020/11/23 17:47:49 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static char	**ft_fill_res(char **res, char const *s, char c,
 		while (s[i] != c && s[i] != '\0')
 			i++;
 		end = i - 1;
-		res[arr_num] = ft_substr(s, start, (end - start + 1));
+		res[arr_num] = ft_substr(s, start, (size_t)(end - start + 1));
 		if (!(res[arr_num]))
 			return (ft_free(arr_num, res));
 		arr_num++;

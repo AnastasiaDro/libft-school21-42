@@ -6,7 +6,7 @@
 /*   By: cerebus <cerebus@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 17:09:39 by cerebus           #+#    #+#             */
-/*   Updated: 2020/11/23 16:15:33 by cerebus          ###   ########.fr       */
+/*   Updated: 2020/11/23 17:48:40 by cerebus          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ char		*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup("\0"));
 	while (ft_compare(s1[end], set) && (end > 0))
 		end--;
-	return (ft_substr(s1, start, end - start + 1));
+	return (ft_substr(s1, (unsigned int)start, (size_t)(end - start + 1)));
 }
